@@ -38,6 +38,6 @@ jobs:
           # call timeout, retries); the server caps AI work with AI_RUN_BUDGET_MINUTES.
           curl -fsS --max-time 1800 -X POST \
             -H "Authorization: Bearer ${{ secrets.MYNEWS_ADMIN_TOKEN }}" \
-            "${{ secrets.MYNEWS_API_URL }}/api/admin/collect?trigger=schedule" | tee result.json
+            "${{ secrets.MYNEWS_API_URL }}/api/admin/collect?trigger=${{ github.event_name == 'schedule' && 'schedule' || 'admin' }}" | tee result.json
           echo
           node -e "const r=require('./result.json'); console.log('status:', r.status ?? 'skipped', '| new articles:', r.articles_new, '| expired:', r.articles_expired, '| summaries:', r.summaries_generated); if (r.status === 'failed') process.exit(1)"
