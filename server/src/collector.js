@@ -327,9 +327,14 @@ async function generateSummaries(db, job, d, now) {
   });
 
   let calls = 0;
+  const aiStartedAt = Date.now();
   for (const story of due) {
     if (calls >= config.maxAiCallsPerRun) {
       job.notes.push(`${due.length - calls} story summaries deferred to a later run (MAX_AI_CALLS_PER_RUN=${config.maxAiCallsPerRun})`);
+      break;
+    }
+    if (calls > 0 && Date.now() - aiStartedAt > config.aiRunBudgetMs) {
+      job.notes.push(`${due.length - calls} story summaries deferred to a later run (AI time budget of ${config.aiRunBudgetMs / 60_000} min used)`);
       break;
     }
     // Space out real model calls to stay under free-tier requests-per-minute limits.

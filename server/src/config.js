@@ -47,6 +47,9 @@ export const config = {
   aiMaxTokens: modelConfig.max_tokens,
   promptVersion: modelConfig.prompt_version,
   maxAiCallsPerRun: intEnv("MAX_AI_CALLS_PER_RUN", 10),
+  // No new model call starts after this many minutes of AI work in one run, so a
+  // slow provider cannot push the run past the scheduler's HTTP timeout.
+  aiRunBudgetMs: intEnv("AI_RUN_BUDGET_MINUTES", 8) * 60_000,
   // Set to 2 to save quota: only multi-publisher stories get an AI analysis.
   aiMinPublishers: Math.max(1, intEnv("AI_MIN_PUBLISHERS", 1)),
   maxBackgroundLookupsPerRun: intEnv("MAX_BACKGROUND_LOOKUPS_PER_RUN", 60),
