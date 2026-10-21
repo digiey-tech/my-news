@@ -13,7 +13,9 @@ CS 403 project: an AI-assisted news service. A server collects news every hour, 
 
 Supporting documents: [Verification evidence](docs/VERIFICATION.md) · [Grouping examples](docs/GROUPING_EXAMPLES.md) · [AI summary review](docs/AI_REVIEW.md) · [Release notes](docs/RELEASE_NOTES.md) · [Defect log](docs/DEFECT_LOG.md) · [AI development reflection](docs/AI_REFLECTION.md) · [Demo checklist](docs/DEMO_CHECKLIST.md)
 
-**Deployed API:** `https://<your-service>.onrender.com` ← replace after deploying (see [Deployment](#deployment)).
+**Deployed API:** https://mynews-api.onrender.com
+
+**Demo shown on an iPhone via the Flutter web build (no Android device or Mac available); the Android APK is included.** The web build is the same Flutter code, published by [web-pages.yml](.github/workflows/web-pages.yml) at https://digiey-tech.github.io/my-news/ and opened in Safari (Share → Add to Home Screen for full screen).
 
 ---
 
