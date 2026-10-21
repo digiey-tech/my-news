@@ -24,9 +24,9 @@ services:
       - key: ADMIN_TOKEN
         generateValue: true
       - key: MAX_AI_CALLS_PER_RUN
-        value: "10"
+        value: "4"
       - key: AI_MIN_PUBLISHERS
-        value: "1"
+        value: "2"
       - key: ENABLE_INTERNAL_SCHEDULER
         value: "false"
       - key: CONTACT

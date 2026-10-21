@@ -13,7 +13,7 @@
       "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
       "api_key_env": "GEMINI_API_KEY",
       "send_reasoning_effort": true,
-      "min_interval_ms": 7000
+      "min_interval_ms": 13000
     },
     "openai_compatible": {
       "description": "Any other OpenAI-compatible API, e.g. Groq (https://api.groq.com/openai/v1) or OpenRouter (https://openrouter.ai/api/v1). Set AI_BASE_URL and AI_MODEL.",

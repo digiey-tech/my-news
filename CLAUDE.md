@@ -26,7 +26,7 @@ CS 403 class project (due **Friday, October 23, 2026, 11:59 p.m. Eastern**). An 
 - After code changes, run `npm test` in `server/` and `flutter analyze` + `flutter test` in `app/`.
 
 ## Decisions already made
-- AI: Gemini free tier, not Claude (the user has no paid API credits; a Claude subscription cannot be used by a server). Free-tier quotas are not published; defaults are `MAX_AI_CALLS_PER_RUN=10`, 7 s between calls, 429 → stop for the hour and leave stories pending, 5xx → retry twice. `AI_MIN_PUBLISHERS=2` is the quota-saving switch.
+- AI: Gemini free tier, not Claude (the user has no paid API credits; a Claude subscription cannot be used by a server). Free-tier quota for this key: 5 RPM, 20 RPD (AI Studio, 2026-10-21); production uses `MAX_AI_CALLS_PER_RUN=4`, `AI_MIN_PUBLISHERS=2`, 13 s between calls, 429 → stop for the hour and leave stories pending, 5xx → retry twice. `AI_MIN_PUBLISHERS=2` is the quota-saving switch.
 - Hosting: Render free web service + Neon free Postgres + GitHub Actions cron. The repo should be **public** so Actions minutes are unlimited (pending the user's confirmation).
 - The project was moved out of the Flutter SDK folder (`C:\Users\NewDi\flutter\examples\myNews (1)`) on 2026-10-21; that old copy is obsolete.
 
