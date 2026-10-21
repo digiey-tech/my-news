@@ -1,0 +1,7 @@
+# Secrets and local data
+.env
+server/data/
+server/node_modules/
+
+# Flutter build output (app/.gitignore covers the rest)
+app/build/

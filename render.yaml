@@ -1,0 +1,33 @@
+# Render Blueprint for the My News API.
+# Database: use a free Neon (https://neon.tech) Postgres database or a Render
+# Postgres instance and paste its connection string into DATABASE_URL.
+# The hourly schedule is .github/workflows/hourly-collect.yml, which also wakes
+# the free Render instance if it has spun down.
+services:
+  - type: web
+    name: mynews-api
+    runtime: node
+    rootDir: server
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "22.13.0"
+      - key: DATABASE_URL
+        sync: false
+      - key: AI_PROVIDER
+        value: gemini
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: MAX_AI_CALLS_PER_RUN
+        value: "10"
+      - key: AI_MIN_PUBLISHERS
+        value: "1"
+      - key: ENABLE_INTERNAL_SCHEDULER
+        value: "false"
+      - key: CONTACT
+        sync: false

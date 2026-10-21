@@ -1,0 +1,39 @@
+{
+  "label": "FIXTURE DATASET - fictional demonstration data, not real news. Used by automated tests and the local demo database only.",
+  "hours_ago_relative_to": "test clock",
+  "expected_groups": [
+    { "name": "A. Riverton bus expansion", "refs": ["a1", "a2", "a3"] },
+    { "name": "B. Hurricane Delia landfall", "refs": ["b1", "b2", "b3"] },
+    { "name": "C. Acme Motors SUV recall", "refs": ["c1", "c2"] },
+    { "name": "D. Norland central bank rate rise", "refs": ["d1", "d2"] },
+    { "name": "E. Pemberton Museum returns bronzes", "refs": ["e1", "e2"] }
+  ],
+  "expected_separate": [
+    { "name": "Same person, unrelated events: Senator Mara Quinn", "refs": ["q1", "q2"] },
+    { "name": "Same topic, different events: two wildfires", "refs": ["w1", "w2"] }
+  ],
+  "articles": [
+    { "ref": "a1", "publisher": "Fox News", "hours_ago": 10, "url": "https://fixture.example/fox/riverton-bus", "title": "Riverton council approves expanded late-night bus service", "excerpt": "The Riverton city council voted 7-2 on Monday to extend bus service hours until 2 a.m. on six routes. Supporters said night-shift workers need transit; two council members said the $4 million cost is not yet funded." },
+    { "ref": "a2", "publisher": "NPR", "hours_ago": 8, "url": "https://fixture.example/npr/riverton-transit", "title": "Riverton votes to extend bus service hours for night workers", "excerpt": "Riverton's council approved longer bus service hours, a change transit advocates say will help hospital and warehouse workers. Critics on the council questioned how the city will pay the $4 million annual cost." },
+    { "ref": "a3", "publisher": "BBC News", "hours_ago": 6, "url": "https://fixture.example/bbc/riverton-buses", "title": "US city Riverton backs longer bus service hours despite funding questions", "excerpt": "Riverton council members voted to extend bus service on six routes. The final route plan and funding source remain under discussion, officials said." },
+
+    { "ref": "b1", "publisher": "NPR", "hours_ago": 30, "url": "https://fixture.example/npr/delia-landfall", "title": "Hurricane Delia makes landfall near Port Arlo as a Category 3 storm", "excerpt": "Hurricane Delia came ashore near Port Arlo early Tuesday with winds of 120 mph. Officials ordered evacuations along the coast and warned of storm surge flooding." },
+    { "ref": "b2", "publisher": "CBS News", "hours_ago": 28, "url": "https://fixture.example/cbs/delia-port-arlo", "title": "Delia slams Port Arlo, knocking out power to 300,000", "excerpt": "Hurricane Delia made landfall near Port Arlo, leaving about 300,000 customers without power. Storm surge flooding reached downtown streets, emergency officials said." },
+    { "ref": "b3", "publisher": "The Guardian", "hours_ago": 26, "url": "https://fixture.example/guardian/delia-surge", "title": "Hurricane Delia: storm surge floods Port Arlo after landfall", "excerpt": "Residents of Port Arlo described rising water after Hurricane Delia made landfall. Evacuation orders remain in place and power outages are widespread." },
+
+    { "ref": "c1", "publisher": "BBC News", "hours_ago": 20, "url": "https://fixture.example/bbc/acme-recall", "title": "Acme Motors recalls 200,000 electric SUVs over battery fire risk", "excerpt": "Acme Motors is recalling about 200,000 Voltara electric SUVs after reports of battery fires while charging. Owners are advised to park outside until repairs are made." },
+    { "ref": "c2", "publisher": "CBS News", "hours_ago": 19, "url": "https://fixture.example/cbs/voltara-battery-recall", "title": "Voltara SUV recall: Acme says battery fires linked to charging", "excerpt": "Acme Motors said its recall of 200,000 Voltara SUVs follows a dozen battery fires during charging. Regulators said they are reviewing the recall." },
+
+    { "ref": "d1", "publisher": "The Guardian", "hours_ago": 40, "url": "https://fixture.example/guardian/norland-rates", "title": "Norland central bank raises interest rates to 5.5% to fight inflation", "excerpt": "The Bank of Norland raised its main interest rate by half a point to 5.5%, citing persistent inflation. Business groups warned higher borrowing costs could slow hiring." },
+    { "ref": "d2", "publisher": "Al Jazeera", "hours_ago": 39, "url": "https://fixture.example/aljazeera/norland-rate-hike", "title": "Bank of Norland hikes interest rates again as inflation stays high", "excerpt": "Norland's central bank increased interest rates to 5.5%. Unions said the rate rise will hurt mortgage holders while the bank said inflation must come down." },
+
+    { "ref": "e1", "publisher": "Fox News", "hours_ago": 50, "url": "https://fixture.example/fox/pemberton-bronzes", "title": "Pemberton Museum agrees to return Kalari bronzes", "excerpt": "The Pemberton Museum said it will return 12 Kalari bronze sculptures taken during a colonial expedition. Kalari officials welcomed the decision and said the bronzes will go on display in the capital." },
+    { "ref": "e2", "publisher": "BBC News", "hours_ago": 47, "url": "https://fixture.example/bbc/kalari-bronzes-return", "title": "Kalari bronzes to be returned by Pemberton Museum after decades-long campaign", "excerpt": "The Pemberton Museum will return 12 bronze sculptures to Kalari. Campaigners said the return of the bronzes was overdue; some trustees had argued the museum should keep them." },
+
+    { "ref": "q1", "publisher": "NPR", "hours_ago": 12, "url": "https://fixture.example/npr/quinn-farm-bill", "title": "Senator Mara Quinn introduces farm subsidy bill", "excerpt": "Senator Mara Quinn introduced legislation to expand subsidies for small dairy farms, saying prices have fallen for three years." },
+    { "ref": "q2", "publisher": "Fox News", "hours_ago": 9, "url": "https://fixture.example/fox/quinn-accident", "title": "Senator Mara Quinn hospitalized after car accident", "excerpt": "Senator Mara Quinn was taken to hospital with minor injuries after a car accident on Interstate 9, her office said." },
+
+    { "ref": "w1", "publisher": "CBS News", "hours_ago": 15, "url": "https://fixture.example/cbs/lane-county-wildfire", "title": "Wildfire forces evacuations in Oregon's Lane County", "excerpt": "A fast-moving wildfire in Lane County, Oregon, has forced 2,000 residents to evacuate. Firefighters said strong winds are spreading the fire." },
+    { "ref": "w2", "publisher": "The Guardian", "hours_ago": 14, "url": "https://fixture.example/guardian/ventura-wildfire", "title": "Wildfire destroys homes in California's Ventura County", "excerpt": "A wildfire in Ventura County, California, has destroyed 40 homes. Firefighters said dry conditions and strong winds are spreading the fire." }
+  ]
+}

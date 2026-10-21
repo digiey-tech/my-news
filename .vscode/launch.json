@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "My News app (local server via emulator)",
+            "type": "dart",
+            "request": "launch",
+            "cwd": "app",
+            "program": "lib/main.dart",
+            "args": ["--dart-define=API_BASE_URL=http://10.0.2.2:8080"]
+        },
+        {
+            "name": "My News app (deployed server)",
+            "type": "dart",
+            "request": "launch",
+            "cwd": "app",
+            "program": "lib/main.dart",
+            "args": ["--dart-define=API_BASE_URL=https://mynews-api.onrender.com"]
+        },
+        {
+            "name": "My News server",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/server",
+            "program": "${workspaceFolder}/server/src/index.js"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Starter: open index.html",
+            "file": "${workspaceFolder}/myNews/index.html"
+        }
+    ]
+}
